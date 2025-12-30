@@ -1,31 +1,13 @@
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    int grade;
-
-    scanf("%d ", &grade);
-
-    if(90 <= grade <= 100)
+    int n, i, sum;
+    scanf("%d", &n);
+    for(i=1; i<n+1; i++)
     {
-        printf("A");
+        sum += i;
     }
-    else if(80 <= grade < 90)
-    {
-        printf("B");
-    }
-    else if(70 <= grade < 80)
-    {
-        printf("C");
-    }
-    else if(60 <= grade < 70)
-    {
-        printf("D");
-    }
-    else
-    {
-        printf("F");
-    }
-
+    printf("%d\n", sum);
     return 0;
 }

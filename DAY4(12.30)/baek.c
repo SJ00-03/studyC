@@ -1,34 +1,13 @@
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    int x, y;
-
-    scanf("%d", &x);
-    scanf("%d", &y);
-
-    switch(x)
-    case(x > 0)
+    int n, i, sum = 0;
+    scanf("%d", &n);
+    for(i=1; i<n+1; i++)
     {
-        if
+        sum += i;
     }
-
-    if(x > 0 && y > 0)
-    {
-        printf("1\n");
-    }
-    else if(x > 0 && y < 0)
-    {
-        printf("4\n");
-    }
-    else if(x < 0 && y > 0)
-    {
-        printf("2\n");
-    }
-    else if(x < 0 && y < 0)
-    {
-        printf("3\n");
-    } 
-
+    printf("%d\n", sum);
     return 0;
 }

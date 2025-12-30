@@ -1,7 +1,13 @@
 #include <stdio.h>
 
-int sum(int x, int y);
 
+int sum(int x, int y)
+{
+    int temp;
+    temp = x + y;
+
+    return temp;
+}
 
 int main(void)
 {
@@ -14,10 +20,3 @@ int main(void)
     return 0;
 }
 
-int sum(int x, int y)
-{
-    int temp;
-    temp = x + y;
-
-    return temp;
-}

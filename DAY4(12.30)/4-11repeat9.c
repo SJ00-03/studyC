@@ -1,14 +1,24 @@
 #include <stdio.h>
 
-
-int i, j;
-
-for(i=0; i<5; i++)
+int main(void)
 {
-    for(j=0; j<5; j++)
+    int i, j;
+    for(i=0; i<5; i++)
     {
-        if()
-
+        for(j=0; j<5; j++)
+        {
+            if(i == j || i + j == 4)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
     }
-    
+    return 0;
 }
+
+    
