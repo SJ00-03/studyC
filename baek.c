@@ -1,43 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main ()
+int main()
+
 {
-    int A, B, C;
-    scanf("%d %d %d", &A, &B, &C);
+    int i;
+    int speed[10];
+    int count = sizeof(speed)/sizeof(speed[0]);
     
-    if(A==B && B==C)
+
+    for(i=0; i < count; i++)
     {
-        printf("%d\n", 10000 + A*1000);
+        int s = rand()%15;
+        speed[i] = s;
+        
     }
-    else if(A==B || B==C || C==A)
+
+    for(i=0; i < count; i++)
     {
-        if(A==B)
-        {
-         printf("%d\n", 1000 + A*100);
-        }
-        else if(B==C)
-        {
-         printf("%d\n", 1000 + B*100);   
-        }
-        else if(C==A)
-        {
-         printf("%d\n", 1000 + A*100);   
-        }
+        printf("%5d", speed[i]);
     }
-    else if(A!=B && B!=C && C!=A)
-    {
-       if(A>B && A>C)
-        {
-         printf("%d\n", A*100);
-        } 
-        else if(B>A && B>C)
-        {
-         printf("%d\n", B*100);
-        } 
-        else if(C>A && C>A)
-        {
-         printf("%d\n", C*100);
-        } 
-    }
-    
+
+    return 0;
 }
