@@ -9,8 +9,9 @@ int label_check(int value[], int label[], int N, int threshold)
         if(value[i] < threshold) label[i] = 1;
         else label[i] = 0;
     }
-    return label[N];
+    return label[]; //함수에서 배열을 return 할 수 있는지?
     }
+    
 //임계치가 넘는 개수 구하는 함수
 int count(int label[], int N)
 {
@@ -18,9 +19,8 @@ int count(int label[], int N)
     for(int i = 0; i < N; i++)
     {
         if(label[i] == 1) count += 1;
-
-        return count;
     }
+    return count;
 }
 //중간 찾기 함수
 int caculate(int count, int N, int label[])
@@ -32,8 +32,9 @@ int caculate(int count, int N, int label[])
     }
     int index_avg = sum_index / count;
     return index_avg;
-
 }
+
+//메인함수
 int main()
 {
     int threshold = 0;
@@ -52,7 +53,7 @@ int main()
     }
     printf("임계값 입력: ");
     scanf("%d", &threshold);
-    
+
     //여기서부터 위에 만들어 놓은 함수를 사용하면 됨
     int check_label = label_check(value, label, N, threshold);
     int cnt = count(label, N);

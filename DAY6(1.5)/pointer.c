@@ -32,9 +32,11 @@ int main(void)
 }
     ------------------------------*/
 
-#include <stdio.h>
+
 
 /*3번 포인터 연습 ----------------------------------
+#include <stdio.h>
+
 int main(void)
 {
     int a = 10, b = 15, total;
@@ -55,3 +57,138 @@ int main(void)
     return 0;
 }
     ---------------------------------------------------------*/
+
+/*4번 포인터 연습 ------------------------------------------
+#include <stdio.h>
+
+int main(void)
+    {
+        int a = 10, b = 20;
+        const int *pa = &a; //const 사용시 *pa = 20 불가능
+
+        printf("변수 a의 값: %d\n", *pa);
+        pa = &b;
+        printf("변수 b의 값: %d\n", *pa);
+        pa = &a;
+        a = 20;
+        printf("변수 a의 값: %d\n", *pa);
+
+        return 0;
+    }
+
+      ------------------------------------------*/
+
+/*5번 주소와 포인터의 크기----------------------------
+#include <stdio.h>
+
+int main(void)
+{
+    char ch;
+    int in;
+    double db;
+
+    char *pc = &ch;
+    int *pi = &in;
+    double *pd = &db;
+
+    printf("char형 변수의 주소 크기: %d\n", sizeof(&ch));
+    printf("int형 변수의 주소 크기: %d\n", sizeof(&in));
+    printf("double형 변수의 주소 크기: %d\n", sizeof(&db));
+    printf("\n");
+    printf("char * 포인터의 크기: %d\n", sizeof(pc)); //주소를 담아야하기 떄문에 8바이트
+    printf("int * 포인터의 주소 크기: %d\n", sizeof(pi));
+    printf("double * 포인터의 주소 크기: %d\n", sizeof(pd));
+    printf("\n");
+    printf("char * 포인터가 가리키는 변수의 크기: %d\n", sizeof(*pc));
+    printf("int * 포인터가 가리키는 변수의 크기: %d\n", sizeof(*pi));
+    printf("double * 포인터가 가리키는 변수의 크기: %d\n", sizeof(*pd));
+      
+    return 0;
+}
+
+--------------------*/
+
+/*6번 포인터의 대입 규칙----------------------------
+#include <stdio.h>
+
+int main(void)
+{
+    int a = 10;
+    int *p = &a;
+    int *pd;
+
+    pd = p;
+    
+    printf("%d\n", *pd);
+    
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a = 10;
+    int *p = &a;
+    double *pd;
+
+    pd = p;
+    
+    printf("%lf\n", *(double *)pd);
+    
+
+    return 0;
+}
+
+------------------------------------*/
+
+/*7-1번 포인터를 쓰는 이유 ----------------------다시해보기--------------------
+#include <stdio.h>
+
+int swap(int x, int y)
+{
+    int temp;
+
+    temp = x;
+    x = y;
+    y = temp;
+    
+    return x, y;
+}
+
+int main(void)
+{
+    int a = 10, b = 20;
+
+    int ca, cb = swap(a, b);
+    printf("a: %d, b: %d\n", ca, cb);
+    
+    return 0;
+}
+----------------------------------*/
+
+/*7-2번 포인터를 쓰는 이유 ------------------------------------------
+#include <stdio.h>
+
+void swap(int *pa, int *pb)
+{
+    int temp;
+
+    temp = *pa;
+    *pa = *pb;
+    *pb = temp;
+}
+
+int main(void)
+{
+    int a = 10, b = 20;
+
+    swap(&a, &b);
+    printf("a: %d, b: %d\n", a, b);
+    
+    return 0;
+}
+------------------------------------------------------------------*/
+
