@@ -5,7 +5,7 @@
 int main(void)
 {
     srand(time(NULL));
-    double battery[100];
+    int battery[100];
     int i, N, s;
     int warning = 0;
 
@@ -26,12 +26,12 @@ int main(void)
 
     for(i=0; i < N; i++)
     {
-        if(warning = 0 && battery[i] <= 30)
+        if(warning == 0 && battery[i] <= 30)
         {
             printf("ON ");
         }
 
-        else if (warning = 0 && battery[i] >= 35)
+        else if (warning == 0 && battery[i] >= 35)
         {
         printf("OFF ");
         }
