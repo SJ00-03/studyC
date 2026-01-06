@@ -1,25 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 
 int main()
 
 {
-    int i;
-    int speed[10];
-    int count = sizeof(speed)/sizeof(speed[0]);
-    
+    int std_num = 30; 
+    int turnin[28], i; //n
+    int size = sizeof(turnin)/sizeof(turnin[0]);
 
-    for(i=0; i < count; i++)
+    for(i = 0; i < size; i++)
     {
-        int s = rand()%15;
-        speed[i] = s;
-        
+        if
     }
 
-    for(i=0; i < count; i++)
-    {
-        printf("%5d", speed[i]);
-    }
+
+
 
     return 0;
 }
