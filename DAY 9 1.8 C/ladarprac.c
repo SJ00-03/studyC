@@ -15,7 +15,7 @@ int main()
     
     for(i = 1; i < size; i++)
     {
-        int distance_range = rand()%21 - 10;
+        int distance_range = rand()%21 - 10; // -10 ~ 10
         degree[i] = degree[i-1] + distance_range;
     }
 
