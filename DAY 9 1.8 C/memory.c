@@ -46,7 +46,16 @@ int main(void)
     }
 
     printf("다섯 명의 나이를 입력하세요: ");
-    for(i = )
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &pi[i]);
+        sum += pi[i];
+    }
+    
+    printf("다섯 명의 평균 나이: %.1lf\n", (sum/5.0));
+    free(pi);
+
+    return 0;
 }
 */
 
@@ -124,7 +133,7 @@ int main(void)
 
 */
 
-/*5. 동적 할당 영역에 저장한 문자열을 함수로 처리하는 예*/
+/*5. 동적 할당 영역에 저장한 문자열을 함수로 처리하는 예
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -165,3 +174,5 @@ void print_str(char **ps)
         ps++;
     }
 }
+
+*/
