@@ -44,10 +44,11 @@ void label_check(int value[], int label[], int N, int threshold)
 
     for(int i = 0; i < N; i++)
     {
+        printf("/t");
         if(value[i] < threshold)
         {
             label[i] = 1;
-            printf("%5d", i + 1);
+            printf("%d", i + 1);
             cnt += 1;
         } 
         else label[i] = 0;
