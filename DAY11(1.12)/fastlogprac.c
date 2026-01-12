@@ -19,7 +19,7 @@ int main(void)
         printf("파일 X \n");
     }
 
-    while(1)
+    while(fgets(count_ping, sizeof(count_ping), fp) != NULL)
     {
         cnt_ping += 1;
     }

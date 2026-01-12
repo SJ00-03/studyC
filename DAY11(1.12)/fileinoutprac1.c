@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+
 int main(void)
 {
     int Ecnt = 0, sensor = 0, motor = 0;
