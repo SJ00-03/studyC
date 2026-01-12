@@ -36,5 +36,5 @@ int main(void)
 
 RobotSpeed computeSpeed(WheelSpeed w, double wheel_radius, double wheel_distance)
 {
-    
+
 }
